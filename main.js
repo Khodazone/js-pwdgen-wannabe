@@ -1,18 +1,22 @@
-const myname=prompt ("Insert your name:");
+// Input acquisition from user
+const myname = prompt("Insert your name:");
+const mysurname = prompt("Insert your surname:");
+const favcolor = prompt("Insert your favorite color:");
+let number1 = prompt("Days in one year:");
+let number2 = prompt("Working days in a week");
 
-const mysurname=prompt ("Insert your surname:");
+// conversion type
+number1 = parseInt(number1); 
+number2 = parseInt(number2);
 
-const favcolor=prompt ("Insert your favorite color:");
-
-const number1=prompt ("Days in one year:");
-
-let number2=prompt ("Working days in a week");
-
+// Random for password computation
 let division = number1 / number2;
 
-let newpasswordgenerated = myname + mysurname + favcolor + division;
+// Generating password
+let newPasswordGenerated = myname + mysurname + favcolor + division;
 
-let PasswordGeneratorString = `
+// Print information output
+let passwordGeneratorString = `
 --------- General Data --------------
 > General Informations
 --- Name: ${myname}
@@ -23,10 +27,7 @@ let PasswordGeneratorString = `
 -------------------------------------
 `;
 
+console.log(passwordGeneratorString);
+console.log(newPasswordGenerated);
 
-
-console.log(PasswordGeneratorString);
-console.log(newpasswordgenerated);
-
-
-document.getElementById("password-generator").innerHTML = newpasswordgenerated; 
+document.getElementById("password-generator").innerHTML = newPasswordGenerated; 
